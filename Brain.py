@@ -4,8 +4,13 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.vgg16 import preprocess_input
 import numpy as np
+import gdown
 
-model_path = "/Users/nimatashi/Desktop/ML/streamlit code/my_model.h5"
+url = "https://drive.google.com/file/d/188cQcZ-atR6r_mzi-Z4v3xIllCYqLRuz/view?usp=sharing" 
+output = "my_model.h5" 
+gdown.download(url, output, quiet=False) 
+
+model_path = "my_model.h5"
 model = load_model(model_path)
 model.save("our_model.h5")
 
