@@ -10,7 +10,7 @@ url = "https://drive.google.com/file/d/188cQcZ-atR6r_mzi-Z4v3xIllCYqLRuz/view?us
 output = "my_model.h5" 
 gdown.download(url, output, quiet=False) 
 
-model_path = "my_model.h5"
+model_path = "/mount/src/brain-app/my_model.h5"
 model = load_model(model_path)
 model.save("our_model.h5")
 
